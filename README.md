@@ -1,6 +1,6 @@
 # Udacity-Linux-Server-Configuration-428
 ### About
-  This is the Udacity project 6 about the Configuring the Linux the server.Take a baseline installation of a Linux distribution on a virtual machine and prepare it to host your web applications, to include installing updates, securing it from a number of attack vectors and installing/configuring web and database servers.
+  This is the Udacity project 6 about the Configuring the Linux the server.Take a baseline installation of a Linux distribution on a virtual machine and prepare it to host your web applications,and installing/configuring web and database servers.
 ### Server IP details
 Server IP Address 13.232.118.69
 
