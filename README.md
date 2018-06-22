@@ -1,4 +1,4 @@
-# Linux-Server-Configuration-428
+# Linux-Server-Configuration
 
 ## About
   This project is submitted under Udacity Full Stack web Development Nanodegree Final Project
