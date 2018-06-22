@@ -1,7 +1,7 @@
-# Linux-Server-Configuration
+# Linux-Server-Configuration-428
 
 ## About
-  This project is submitted under Udacity Full Stack web Development Nanodegree Final Project
+  This project is submitted under Udacity Full Stack web Development Nanodegree Final Project-6
 
 ## Server Details
 Server Static IP Address 13.126.215.145
