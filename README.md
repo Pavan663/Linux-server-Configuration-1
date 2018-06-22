@@ -1,67 +1,93 @@
-# Linux-Server-Configuration-428
+# Udacity-Linux-Server-Configuration-428
+### About
+  This is the Udacity project 6 about the Configuring the Linux the server.Take a baseline installation of a Linux distribution on a virtual machine and prepare it to host your web applications, to include installing updates, securing it from a number of attack vectors and installing/configuring web and database servers.
+### Server IP details
+Server IP Address 13.232.118.69
 
-## About
-  This project is submitted under Udacity Full Stack web Development Nanodegree Final Project-6
+Hosted site Url [http://13.232.118.69.xip.io/](http://13.232.118.69.xip.io/)
 
-## Server Details
-Server Static IP Address 13.126.215.145
+### Procedure
+1. Launch Virtual Machine with Udacity account
+2. Follow the instructions provided to SSH into your server
+3. Create a new user named grader
+4. Give the grader the permission to sudo
+5. Update all currently installed packages
+6. Change the SSH port from 22 to 2200
+7. Configure the Uncomplicated Firewall (UFW) to only allow incoming connections for SSH (port 2200), HTTP (port 80), and NTP (port 123)
+8. Configure the local timezone to UTC
+9. Install and configure Apache to serve a Python mod_wsgi application
+10. Install and configure PostgreSQL:
+	- Do not allow remote connections
+	- Create a new user named catalog that has limited permissions to your catalog application database
+11. Install git, clone and setup your Catalog App project (from your GitHub repository from earlier in the Nanodegree program) so that it functions correctly when visiting your server’s IP address in a browser. Remember to set this up appropriately so that your .git directory is not publicly accessible via a browser!
 
-Hosted site Url [http://13.126.215.145.xip.io]
+### id_rsa key
 
-## Grader Password
-
-graders
-
-## Grader Key
-Download Key from above or
-
------BEGIN RSA PRIVATE KEY-----
-MIIEowIBAAKCAQEA7U8H7BQ3mqe+F2crD0/ZKYVsniXaK4up1SpWmJnGNm91Hbgz
-7X0YFb/0LQRPURL+uPgOgzoywApVpCWXcxU4/lYziFnfsIg3Psr4+kYQ5vAV3Y0G
-Gh9vl3RSQ+cgjR+iKmAwFNWqA9m4z/7YI6HvCJP/1MhGM73tMFxVS5++pMFlf8df
-25mtfUyuPrwnsk8y7/SLH8NX6loS+zVmqRGnxKCBm3tv2sN8efQBbp8pcYS0ZlmN
-WhbwHY9Lq/190GsK9Q9dxQtnZu2lyT1/zTFS2p3avd13bBOXH+NSP+kS6tbGZFMG
-07uC6hsBf076xm5yeXhA4V/CH5Df+JC+OhX/xQIDAQABAoIBAQCQxymPJxpxWStI
-/eEwW0ei5ErLBU7gSDnZ2hWwzgg2h7NM6WeM2UfLZSukF0AIt2z+DiBUgTobHXL4
-TRLj3CvER3TzF9m3yrLhtVVG415GdmzwmKwDXfBn10ilMqoSTx1RexN6coxiAv+U
-rebRfmbltd1bxL/Hq3S8j2heVdwqiMID6OMvztGjHTiFdUPTEE+GCWK3Zc/AO52c
-Ipj1cAwhEI338//UiaU/hRP1qZ2xEgss2//p8yD/lLxyi44eckxY6FyDUqEP2xu+
-bGNK9al8ZrKCv0bQLwO9qV6FeKCMnNhicEpZmrB6HGqMKfhg8bcgjKzkwmj5lvbG
-58Vum0JhAoGBAPt2HZvFzKPidY9LmvOIYZp9T56U5VoE5j/3jlGX1dT9PfCwJZMl
-24EBai37NQi8gOrIkcDyCDeHq1I8sIMqh5ScPOhZxOPYkzwnbIynO0PofoAsLlgM
-jWK/vDOy4vPe5+IHODS0aqM2vA9Hdsu90TWtdZ/kR3pOV6fEtbkMW9Q5AoGBAPGX
-hcACMh1LLBMUxV4jToxTQ9w+FRRwo4t1hG/C+sZEaBXEHnKuOZ/xYZncKnGr58lx
-rw2rc8gr7VxNxQae/xxN3nEeUfqMKzOW+Bqwc8rLeXdb+RbwFF8AJlMAw9POhAfY
-g00/UQOgq1HsHBmuXgQ9b4yS8TM0+M5KIi2LnL/tAoGAB+1XTZvUsa3n6taFUfwQ
-p6AfrG4hNM9GuumA8Q2KTiaVl0rWRGdDHjP/NufeaiIXJk+gWKbIn4eFXRhQsDHd
-CFBMkz6ROGWRbqoHf/+dnKxtoHjEFT6ADobg1fhjszBpuvRjTzYIzpBhKVIlapLX
-T4viU2IM5swlc0J+QBElq/ECgYAHw3C+3NMzccj2zAITplrN05coqq4OvBflUV9y
-H/fjCyu1F1pLISIk66LRSOvsPzPxmz+e1tWfpxm3j6A3OEDGbhIp3GmR/ZMd00oh
-wW3XJHbAySnV/N0KuHyCylGAqvA/OEvv3YsC7NTUixvUD3Bh/n9pKwepN5iPOH6k
-rAnbeQKBgGW3UmkZxcSHy8d67LEiu3mDFySJUO16Qfb+kCNo90t3oh9H/wU9J++q
-BHcce5S88LxirMG8d0Thzjdqrel/PqQkEwcS2UMlvVIDdhnWk/UlGQUiuYjL2EzG
-/F1oJCCSGHwXvopOyvihj7hyuEIUCrFh/flLiLQ8HGPWe31IikLI
+  ```
+   -----BEGIN RSA PRIVATE KEY-----
+MIIEpAIBAAKCAQEA1XoLtowoRNZzvKNeWfSvR1fq7r4/Cpv4uYxV4auZoQKPlpy+
+cRGOf+9hXpdhx1DR8pg9Bh2zTIeTPOJeay/VVJn2mBjoHHpTlL8AJ9GKOkr3tQi9
+LRwl3ARsTbT3oFxp9Kyx9fiZLW7teNXDJEBRSC69y+nd0gvnbagSzATRGkajEtvr
+0C2nQijWo021ASJp9+VA1gti1jcwhZcwBIYu4mVLmGpXxboa+JF/Xv31s8c4S0+a
+TK4vot0gbmCnBmTPtgtPGmPA/50txcl+FTMVtYiXR2slVzIXlidP2K8HthLhvO0P
+rsDw5rcJCTqyBCN8g8xGuZrD0EA1V0x2hvdIFwIDAQABAoIBAC8yGU7Vc72sT9Af
+qidnIi06sbTwmI1m6DlVXlNTFdbz8vzQUIY85G1CZht8imB/bLsejzc/77j2rEWk
+ok0+OQLIOy1rLD3HiZz0ETu8Zrv2gQckFHbZp0EaNTuEy85HQCGY4ItJ18ukn5m8
+YLUuBwpXUxy26pSajyK+KtGyKuyM0+7JZZj9vk39811r6Rlp4GlRKrcv1xLiEMTi
+v5A33THBknvsHqG8oF34t4jR/cUkYD9dLnlq/7iIz+RQ+8FmoQaJ3UmA6mFdKQu2
+4JMwCVugigWSnCsNj1RMfHt3Yd5TRTIYWLE9iQ9Lg5iwkt5PcgXoOwnnFb6aucXt
+qPiSozkCgYEA8EJgRToogD3EkxljD/Exw74hcs01qJaceuTIgoc2Kf2ZgZ79fqVG
+RcAsP/papGfwnWkz3y9dkxYTmpx9Yvoxm1hsrt0wzh8i0v/+zzCw0nXd5L04UEyI
+td1/Nk74rDYzIIA/F/Q1QtAgBVmwEVWZKe+gu8UmcmQDay9vWBbs5WMCgYEA43Z5
+NKb1UO6DcUs0uEwwt/qpAEKQ4tsRUyT1imZ6K0bOydMAxwBYF2VuZBlTQDVX96pf
+wf6iRfJjx4/379CUVr7sJBxeAlT5mK9+zyd/TWoApMGhouv+afCQMrLmcgOyY/DE
+Chx/BibDoST7Rcvz9QR3klaHy4krl2rtDsd4ur0CgYAcfvLmIxC8rRbMj51FPck2
+Oy3CbP5pQXvLw6jYemr9Lfvv+Mh+JeIg0bst12a6yy0prlmdpgOGN38ZvmfMvnn1
+v9YcI1XvjJfXyM8TCeZe/+XShHLSa1FnqJ629UTfQApuV2ekUq2igAbcO5f7Zlil
+NautuaNmu9//7X9aRlXQmwKBgQCSuBusc7kvD/pm/Kyv6C1QrvWN/mH4gnflWqSr
+Nji9a3n9QwZwVm97/+g51wAVHZN1ZEdKGdZQKe5kjh/OZ4sXfSVSkZ2uAWPSMfko
+5ABATgzGOUPqlDDR4uMQYMc2ad4KiwXYw9LHg/+SFQmjVtAwjkYWdYw4JG2iyMzK
+SK4+PQKBgQDaDPg8d0nwwh4s5vPWaQ2v+JbJCQkMKJI5Y+1BsXhLLYy6Fd14CVzS
+z9GrkeGG3BwWHPg9kkI6i/+cu54T69bkjyAlwtdhrJeQmXFP0l7CzLzdv2IuPrJ/
+phi3qsvrR2TNpBU8pT6AqBWVK3kFJr4eVo6ZandMi5Ymvy0mHpfo/Q==
 -----END RSA PRIVATE KEY-----
 
-## How to connect as grader:
+  ```
+### id_rsa.pub key
+
+```
+ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQDVegu2jChE1nO8o15Z9K9HV+ruvj8Km/i5jFXhq5mhAo+WnL5xEY5/72Fel2HHUNHymD0GHbNMh5M84l5rL9VUmfaYGOgcelOUvwAn0Yo6Sve1CL0tHCXcBGxNtPegXGn0rLH1+Jktbu141cMkQFFILr3L6d3SC+dtqBLMBNEaRqMS2+vQLadCKNajTbUBImn35UDWC2LWNzCFlzAEhi7iZUuYalfFuhr4kX9e/fWzxzhLT5pMri+i3SBuYKcGZM+2C08aY8D/nS3FyX4VMxW1iJdHayVXMheWJ0/Yrwe2EuG87Q+uwPDmtwkJOrIEI3yDzEa5msPQQDVXTHaG90gX sai narasimha@DESKTOP-F8RMTCQ
+```
+### Password
+
+```
+sunil
+```
+
+### Passphrase
+```
+just press enter key for Passphrase
+```
+
+### How to connect as grader:
   save private key provided in your local machine and run the following command
   ```
-  ssh -i path/to/privatekey -p 2200 grader@13.126.215.145
+  ssh -i path/to/privatekey -p 2200 grader@13.232.118.69
     
   ```
-## Configuring Linux Server
+### Configuring Linux Server
 
-### Updating all packages
+#### Updating all packages
 ```
 sudo apt-get update
 sudo apt-get upgrade
 ```
 
-### Creating grader User:
+#### Creating grader User:
   ```
-  sudo adduser grader
+  sudo adduser grader 
   ```
-  This will add new user
+  This will add you to new user
   ```
   sudo nano /etc/sudoers
   ```
@@ -70,7 +96,7 @@ sudo apt-get upgrade
   grader  ALL=(ALL:ALL) ALL
   ```
   This will grant sudo permission to grader
-  ### Creating a ssh key pair for grader
+  #### Creating a ssh key pair for grader
    On your local machine in terminal/command prompt
    ```
    ssh-keygen
@@ -79,7 +105,7 @@ sudo apt-get upgrade
    
    Then in your virtual machine change to newly created user
    ```
-   sudo su - grader
+   su - grader
    ```
    Create a new directory .ssh and new file authorized_keys in that directory
    ```
@@ -95,20 +121,14 @@ sudo apt-get upgrade
    - 644 prevent other user from writting in to file.
    Then restart ssh server
    ```
-   sudo service ssh restart
+   service ssh restart
    ```
    
    Now from your log in to grader with private key generated 
    ```
-   Use this for connecting from local terminal
    ssh -i .ssh/id_rsa grader@ipaddress 
    ```
-   ```
-   OR
-   Use this for connecting from local terminal
-   ssh grader@ip_address 
-   ```
-  ### Changing the ssh port to 2200
+  #### Changing the ssh port to 2200
    ```
    sudo nano /etc/ssh/sshd_config
    ```
@@ -127,12 +147,12 @@ sudo apt-get upgrade
    ssh -i .ssh/id_rsa -p 2200 grader@ipaddress
    ```
    
-  ### Disabling ssh login as root
+  #### Disabling ssh login as root
   `sudo nano /etc/ssh/sshd_config`
   
   make change `PermitRootLogin no`
   
-  ### Configurating  Uncomplicated Fire Wall
+  #### Configurating  Ufw firewall
   ```
   sudo ufw allow 2200/tcp
   sudo ufw allow 80/tcp
@@ -147,12 +167,12 @@ sudo apt-get upgrade
   ```
   It will display all allowed ports
   
-  ### Changing time Zone
+  #### Changing time Zone
   `sudo dpkg-reconfigure tzdata`
   
   select none from list and then select utc.
   
-  ### Installing Apache2 
+  #### Installing Apache2 
   In terminal 
   
   ```sudo apt-get install apache2```
@@ -164,7 +184,7 @@ sudo apt-get upgrade
   Enable mod_wsgi
   
   ```sudo a2enmod wsgi ```
-  #### Setting up your flask application to work with apache2
+  ##### Setting up your flask application to work with apache2
    Creating a flask app
    
    In /var/www directory create a new folder
@@ -178,7 +198,7 @@ sudo apt-get upgrade
    
    In that direcory clone your github repository
    
-   `sudo git clone https://github.com/username/repo_name.git`
+   `sudo git clone https://github.com/username/catalog.git`
    
    Rename your repository to FlaskApp
    
@@ -192,7 +212,9 @@ sudo apt-get upgrade
    ```
    Use json_url instead client_secrets.json in script
    
-  #### Install and configuring postgresql for project
+   Reffered from [stack overflow](https://stackoverflow.com/questions/44742566/wsgi-cant-find-file-in-same-directory-in-app)
+   
+  ##### Install and configuring postgresql for project
    Install Postgres `sudo apt-get install postgresql`
    
    login to postgres `sudo su - postgres`
@@ -211,41 +233,12 @@ sudo apt-get upgrade
    
    Give schema permission to user catalog `GRANT ALL ON SCHEMA public TO catalog;`
    
-   exit from db  `\q`
-   exit from postgres `exit`
+   exit from db and postgres `\q and exit`
    
-   Change the database connection in both db_setup.py and __init__.py as `engine =       create_engine('postgresql://catalog:password@localhost/catalog')`
-
-   #### Create a Virtuval Flask env for our app to be isolated from server environment for better stability(Extra Credit/Optional)
-
-   In this step, we will create a virtual environment for our flask application.
-
-    We will use pip to install virtualenv and Flask. If pip is not installed, install it on Ubuntu through apt-get.
-
-    sudo apt-get install python-pip 
-    If virtualenv is not installed, use pip to install it using following command:
-
-    sudo pip install virtualenv 
-    Give the following command (where venv is the name you would like to give your temporary environment):
-
-    sudo virtualenv venv
-    Now, install Flask in that environment by activating the virtual environment with the following command:
-
-    source venv/bin/activate 
-    Give this command to install Flask inside:
-
-    sudo pip install Flask 
-    Next, run the following command to test if the installation is successful and the app is running:
-
-    sudo python __init__.py 
-    It should display “Running on http://localhost:5000/” or "Running on http://127.0.0.1:5000/". If you see this message, you have successfully configured the app.
-
-    To deactivate the environment, give the following command:
-
-    deactivate
+   Change the database connection in both db_setup.py and `__init__.py` as `engine = create_engine('postgresql://catalog:password@localhost/catalog')`
    
    Now you are ready with your applicatiom
-  ### Configure and Enable a New Virtual Host
+  #### Configure and Enable a New Virtual Host
    `sudo nano /etc/apache2/sites-available/FlaskApp.conf`
    
    In this add the following code
@@ -266,7 +259,7 @@ sudo apt-get upgrade
 		ErrorLog ${APACHE_LOG_DIR}/error.log
 		LogLevel warn
 		CustomLog ${APACHE_LOG_DIR}/access.log combined
-</VirtualHost>
+   </VirtualHost>
    ```
    Enable the virtual host 
    `sudo a2ensite FlaskApp`
@@ -274,7 +267,7 @@ sudo apt-get upgrade
    Disabling the default apache2 page
    `sudo a2dissite 000-default.conf`
    
-  ### Create the .wsgi File
+  #### Create the .wsgi File
     ```
     cd /var/www/FlaskApp
     sudo nano flaskapp.wsgi 
@@ -294,37 +287,29 @@ sudo apt-get upgrade
    save and exit
    
    Deploying flask app with apache2 is referred from [Digital ocean](https://www.digitalocean.com/community/tutorials/how-to-deploy-a-flask-application-on-an-ubuntu-vps)
-  
-   ### Installing require modules
-   You can either install all modules on your machine or create a virtual environment for the project and install the modules
-   To Create virtual environment: sudo virtualenv venv
-   To activate virtual environment: source venv/bin/activate
-   ` pip install flask sqlalchemy psycopg2 requests oauth2client`
-
-   To deactivate virtual environment: deactivate
    
-   ### Setting up your Google Oauth2
+   #### Installing require modules
+   You can either install all modules on your machine or create a virtual environment for the project and install the modules
+   ` pip install flask sqlalchemy psycopg2 requests oauth2client`
+   
+   #### Setting up your Google Oauth2
    Login to your [developer console](https://console.developers.google.com) and select your project and edit OAuth details as following
    
    Javascript origin
-   `http://static_ip_address.xip.io`
+   `http://ip.xip.io`
    
    redirect URI
    
-   `http://static_ip_address.xip.io\callback`
+   `http://ip.xip.io\login`
    
-   `http://static_ip_address.xip.io\gconnect`
+   `http://ip.xip.io\gconnect`
    
-   `http://static_ip_address.xip.io\login`
+   `http://ip.xip.io\callback`
    
    [xip.io](xip.io) is a free DNS which will be the same as using IP address
    
-   ### Final Step
+   #### Final Step
    Restart your apache2 server
    
    `sudo service apache2 restart`
    
-   ### References used
-        https://www.digitalocean.com
-        some git hubs to get an idea 
-"# Linux-Configuration" 
